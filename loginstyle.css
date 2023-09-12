@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.header-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu-main {
+    list-style: none;
+}
+
+.menu-main li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Add the signup and login links to the menu-main list */
+.menu-main li:last-child {
+    float: right;
+}
+
+.menu-main li:last-child a {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.menu-main li:last-child a:hover {
+    color: #0056b3;
+}
+
+.menu-main a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Style the menu-member section */
+.menu-member {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.menu-member li {
+    margin-right: 20px;
+}
+
+.menu-member a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.menu-member a:hover {
+    color: #0056b3;
+}
+
+.header-signup-link,
+.header-login-link {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    margin-right: 10px;
+    text-align: right;
+}
+
+.header-signup-link:hover,
+.header-login-link:hover {
+    color: #0056b3;
+}
+
+.header-logout-button {
+    background-color: #fff;
+    color: #007bff;
+    padding: 10px 20px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.header-logout-button:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.index-intro {
+    background-color: #222;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center; 
+}
+
+.index-intro h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px; 
+}
+
+/* Style the partition between header and content */
+.header-content-divider {
+    background-color: #444;
+    height: 10px;
+    width: 100%;
+}
+
+/*signup and login forms */
+#index-login {
+    background-image: url('your-background-image.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+
+.index-login {
+    display: flex;
+    margin: 20px;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+.index-login-signup,
+.index-login-login {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.index-login-login {
+    background-color: rgba(51, 51, 51, 0.7); 
+    color: #fff;
+}
+
+/* Style the form input fields */
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style the form buttons */
+form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+}
+
+.error-message {
+    color: #ff0000; 
+    font-size: 16px; 
+    font-weight: bold; 
+    margin: 10px 10; 
+}
+
+/* Style the menu buttons container */
+.menu-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; 
+}
+
+/* Style the signup and login links  */
+.menu-buttons .header-login-a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.menu-buttons .header-login-a:hover {
+    color: #0056b3;
+}
