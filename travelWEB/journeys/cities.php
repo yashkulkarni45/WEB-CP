@@ -3,7 +3,7 @@
 $servername = "localhost"; // Change this to your database server name
 $username = "root";        // Change this to your database username
 $password = "";            // Change this to your database password
-$dbname = "travelscapes";         // Change this to your database name
+$dbname = "travelscapes";  // Change this to your database name
 
 // Create a connection to the database
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 // Build the SQL query based on selected filters
-$sql = "SELECT * FROM datafilter WHERE 1";
+$sql = "SELECT * FROM cities WHERE 1"; // Updated table name
 
 // Add filters based on user selections
 if (!empty($selectedRegions)) {
@@ -71,41 +71,6 @@ while ($row = $result->fetch_assoc()) {
 <head>
     <link rel="stylesheet" href="filter.css">
     <title>Filter Data</title>
-    <!-- <style>
-        .filter-box {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin: 10px;
-            display: inline-block;
-        }
-
-        .custom-dropdown {
-            position: relative;
-            display: inline-block;
-            margin-right: 20px;
-            border-right: 1px solid #ccc;
-            padding-right: 20px;
-        }
-
-        .custom-dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f1f1f1;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-        .custom-dropdown-content label {
-            display: block;
-            padding: 5px 10px;
-        }
-
-        .custom-dropdown span::after {
-            content: "▼";
-            padding-left: 5px;
-        }
-    </style> -->
     <script>
         function toggleDropdown(filterName) {
             var dropdownContent = document.getElementById(filterName + "Dropdown");
@@ -118,7 +83,7 @@ while ($row = $result->fetch_assoc()) {
     </script>
 </head>
 <body>
-    <h1>Journey Packages</h1>
+    <h1>City Packages</h1>
     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <h3>Filters</h3>
         <div class="filter-box">
@@ -130,6 +95,7 @@ while ($row = $result->fetch_assoc()) {
                     <label><input type="checkbox" name="region[]" value="South" <?php if (in_array("South", $selectedRegions)) echo "checked"; ?>>South</label>
                     <label><input type="checkbox" name="region[]" value="East" <?php if (in_array("East", $selectedRegions)) echo "checked"; ?>>East</label>
                     <label><input type="checkbox" name="region[]" value="West" <?php if (in_array("West", $selectedRegions)) echo "checked"; ?>>West</label>
+                    <label><input type="checkbox" name="region[]" value="Central" <?php if (in_array("Central", $selectedRegions)) echo "checked"; ?>>Central</label>
                     <label><input type="checkbox" name="region[]" value="North-East" <?php if (in_array("North-East", $selectedRegions)) echo "checked"; ?>>North-East</label>
                     <!-- Add checkboxes for other regions here -->
                 </div>
@@ -137,7 +103,7 @@ while ($row = $result->fetch_assoc()) {
         
             <div class="custom-dropdown">
                 <span onclick="toggleDropdown('season')">Season</span>
-                <div id="seasonDropdown" class="custom-dropdown-content">
+                <div id="seasonDropdown" class=" custom-dropdown-content">
                     <label><input type="checkbox" name="season[]" value="All" <?php if (in_array("All", $selectedSeasons)) echo "checked"; ?>>All</label>
                     <label><input type="checkbox" name="season[]" value="Winter" <?php if (in_array("Winter", $selectedSeasons)) echo "checked"; ?>>Winter</label>
                     <label><input type="checkbox" name="season[]" value="Summer" <?php if (in_array("Summer", $selectedSeasons)) echo "checked"; ?>>Summer</label>
@@ -165,26 +131,28 @@ while ($row = $result->fetch_assoc()) {
 
     <?php
     // Create a table to display the data
-    echo "<h3>Available Journeys</h3>";
+    echo "<h3>Available Cities</h3>";
     echo "<table border='1'>";
     echo "<tr>";
-    echo "<th>Sr No.</th>";
-    echo "<th>Location</th>";
+    echo "<th>City ID</th>"; // Updated table headers
+    echo "<th>City</th>";
     echo "<th>Region</th>";
     echo "<th>Season</th>";
     echo "<th>Days</th>";
     echo "<th>Cost</th>";
+    echo "<th>Action</th>";
     echo "</tr>";
 
     // Loop through the data and display it in the table
     foreach ($data as $row) {
         echo "<tr>";
-        echo "<td>" . $row["srno"] . "</td>";
-        echo "<td>" . $row["location"] . "</td>";
+        echo "<td>" . $row["cityid"] . "</td>"; // Updated column name
+        echo "<td>" . $row["city"] . "</td>"; // Updated column name
         echo "<td>" . $row["region"] . "</td>";
         echo "<td>" . $row["season"] . "</td>";
         echo "<td>" . $row["days"] . "</td>";
         echo "<td>" . $row["cost"] . "</td>";
+        echo "<td><a href='viewjourney.php?city_id=" . $row["cityid"] . "' class='view-button'>View Journey</a></td>"; // Assuming you have a separate page for viewing city details
         echo "</tr>";
     }
 

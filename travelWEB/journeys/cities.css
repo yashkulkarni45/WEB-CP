@@ -19,6 +19,7 @@ h1 {
 
 h3 {
     color: #e84393;
+    
 }
 
 .filter-box {
@@ -65,22 +66,18 @@ table {
     border-collapse: separate;
     border-width: 10px;
     width: 80%;
+    text-align: center;
     margin-left: 50px;
     margin-right: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
-   
 }
 
 table, th, td {
     border: 1px solid #e84393;
     border-radius: 15px;
-    text-align: center;
-}
-
-th, td {
+    text-align: center; 
     padding: 8px;
-    text-align: left;
 }
 
 tr:nth-child(even) {
@@ -100,4 +97,7 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #ff6384;
 }
+
+
+
 
