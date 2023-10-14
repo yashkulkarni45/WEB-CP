@@ -9,16 +9,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <link rel="stylesheet" href="css/style.css">
+<!-- <script>
+        function redirectToLoginOrSignUp() {
+            setTimeout(function () {
+                window.location.href = "log-sig.html";
+            }, 5000); 
+        }
 
-</head>
+        window.addEventListener("load", redirectToLoginOrSignUp);
+    </script>   -->
+    </head>
 <body>
-
 
 <header>
 
     <input type="checkbox" name="" id="toggler">
     <label for="toggler" class="fas fa-bars"></label>
-
 
     <a href="#" class="logo"><span>Travel website</span></a>
 
@@ -31,9 +37,9 @@
     </nav>
 
     <div class="icons">
-        <a href="#" class="fas fa-heart"></a>
-        <a href="#" class="fas fa-shopping-cart"></a>
-        <a href="#" class="fas fa-user"></a>
+        <span data-tooltip="Favourites" data-flow="top"> <a href="#" class="fas fa-heart"></a></span>
+        <span data-tooltip="Cart" data-flow="top"> <a href="#" class="fas fa-shopping-cart"></a></span>
+        <span data-tooltip="Profile" data-flow="top"> <a href="#" class="fas fa-user"></a></span>
     </div>
 
 </header>
@@ -62,15 +68,14 @@
         </div>
 
         <div class="content">
-            <h3>why choose Europe?</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam id eaque nemo debitis eligendi inventore expedita aut reiciendis sunt ab fuga hic, vero recusandae blanditiis delectus exercitationem pariatur maiores consectetur?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum delectus, veniam cumque architecto facere nisi reprehenderit voluptatibus, quia quasi neque voluptate temporibus itaque non obcaecati facilis voluptas odit minus animi.</p>
+            <h3>why choose us?</h3>
+<p> What truly sets us apart is our unwavering commitment to your satisfaction. Our 24/7 customer support is always ready to assist you, and we offer competitive prices and exclusive deals to save you money while you explore the world. Choose our travel website, and you're not just a traveler; you're part of a community that values your journey and strives to make it enjoyable and hassle-free. Join us today for unforgettable adventures, where your travel needs take center stage.</p>
             <a href="#" class="btn">learn more</a>
         </div>
 
     </div>
 
-</section>
+</section> 
 
 <section class="icons-container">
 
@@ -102,7 +107,7 @@
         <img src="images/icon-4.png" alt="">
         <div class="info">
             <h3>secure paymens</h3>
-            <!-- <span>protected by paypal</span> -->
+            <!-- <span>protected by Razorpay</span> -->
         </div>
     </div>
 
@@ -116,7 +121,7 @@
     <div class="box-container">
 
         <div class="box">
-            <span class="discount">-10%</span>
+            <!-- <span class="discount">-10%</span> -->
             <div class="image">
                 <img src="images/img-1.jfif" alt="">
                 <div class="icons">
@@ -132,7 +137,7 @@
         </div>
 
         <div class="box">
-            <span class="discount">-15%</span>
+            <!-- <span class="discount">-15%</span> -->
             <div class="image">
                 <img src="images/img-2.jfif" alt="">
                 <div class="icons">
@@ -148,7 +153,7 @@
         </div>
 
         <div class="box">
-            <span class="discount">-5%</span>
+            <!-- <span class="discount">-5%</span> -->
             <div class="image">
                 <img src="images/img-3.jpg" alt="">
                 <div class="icons">
@@ -164,7 +169,7 @@
         </div>
 
         <div class="box">
-            <span class="discount">-20%</span>
+            <!-- <span class="discount">-20%</span> -->
             <div class="image">
                 <img src="images/img-4.jpg" alt="">
                 <div class="icons">
@@ -180,7 +185,7 @@
         </div>
 
         <div class="box">
-            <span class="discount">-17%</span>
+            <!-- <span class="discount">-17%</span> -->
             <div class="image">
                 <img src="images/img-5.jpg" alt="">
                 <div class="icons">
@@ -196,7 +201,7 @@
         </div>
 
         <div class="box">
-            <span class="discount">-3%</span>
+            <!-- <span class="discount">-3%</span> -->
             <div class="image">
                 <img src="images/img-6.jpg" alt="">
                 <div class="icons">
@@ -212,7 +217,7 @@
         </div>
 
         <div class="box">
-            <span class="discount">-18%</span>
+            <!-- <span class="discount">-18%</span> -->
             <div class="image">
                 <img src="images/img-7.jpg" alt="">
                 <div class="icons">
@@ -228,7 +233,7 @@
         </div>
 
         <div class="box">
-            <span class="discount">-10%</span>
+            <!-- <span class="discount">-10%</span> -->
             <div class="image">
                 <img src="images/img-8.jpg" alt="">
                 <div class="icons">
@@ -244,7 +249,7 @@
         </div>
 
         <div class="box">
-            <span class="discount">-5%</span>
+            <!-- <span class="discount">-5%</span> -->
             <div class="image">
                 <img src="images/img-9.jpg" alt="">
                 <div class="icons">
@@ -299,7 +304,7 @@
         </div>
         <p>Europe is a landmass located entirely in the Northern Hemisphere and mostly in the Eastern Hemisphere.</p>
         <div class="user">
-            <img src="images/pic-2.png" alt="yash pfp">
+            <img src="images/pic-2.png" alt="Bethany pfp">
             <div class="user-info">
                 <h3>Yash</h3>
                 <span>USA</span>
@@ -376,11 +381,11 @@
         </div>
 
         <div class="box">
-            <h3>Other Tracel Locations</h3>
-            <a href="#">India</a>
-            <a href="#">USA</a>
-            <a href="#">Sri Lanka</a>
-            <a href="#">Canada</a>
+            <h3>Indian Travel Locations</h3>
+            <a href="#">Manali</a>
+            <a href="#">Taj Mahal</a>
+            <a href="#">Kerala</a>
+            <a href="#">Mumbai</a>
         </div>
 
         <div class="box">
@@ -389,15 +394,7 @@
             <img src="images/payment.png" alt="">
         </div>
 
-        <div class="box">
-            <h3>Europe Tracel Locations</h3>
-            <a href="#">Netherlands</a>
-            <a href="#">Switzerland</a>
-            <a href="#">France</a>
-            <a href="#">Finland</a>
-            <a href="#">UK</a>
-        </div>
-
+   
     </div>
 
     <div class="credit">&copy; Atharva Kulkarni</div>
